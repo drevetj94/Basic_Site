@@ -29,7 +29,3 @@ gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
 
-gulp.task('bower', ['clean'], function () {
-  return bower('./my_bower_components')
-  .pipe(gulp.dest('/lib'))
-});
