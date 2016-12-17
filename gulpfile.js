@@ -8,6 +8,7 @@
 
 var fs = require('fs');
 var gulp = require('gulp');
+var bower = require('gulp-bower');
 
 /**
  *  This will load all js or coffee files in the gulp directory
@@ -26,4 +27,9 @@ fs.readdirSync('./gulp').filter(function(file) {
  */
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
+});
+
+gulp.task('bower', ['clean'], function () {
+  return bower('./my_bower_components')
+  .pipe(gulp.dest('/lib'))
 });

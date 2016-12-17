@@ -9,7 +9,7 @@
   "scripts": {
     "test": "gulp test",
     "start": "node web.js",
-    "postinstall": "bower install"
+    "postinstall": "bower install && gulp build"
   },
   "devDependencies": {
     "browser-sync": "~2.9.11",
